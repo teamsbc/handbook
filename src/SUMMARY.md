@@ -28,5 +28,6 @@
 
 - [Packages](./development/packages.md)
 - [Artifacts](./development/artifacts.md)
+- [Infrastructure](./development/infrastructure.md)
 - [Build System](./development/build-system.md)
 - [Testing](./development/testing.md)
