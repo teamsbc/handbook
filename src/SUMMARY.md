@@ -1,5 +1,7 @@
 # Summary
 
+- [Handbook](./handbook/index.md)
+
 # Preface
 
 - [Intended Audience](./preface/intended-audience.md)
