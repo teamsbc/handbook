@@ -1,5 +1,4 @@
 [book]
+title = "TeamSBC Handbook"
 authors = ["Simon de Vlieger"]
 language = "en"
-src = "src"
-title = "TeamSBC Handbook"
