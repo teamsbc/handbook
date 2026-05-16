@@ -55,38 +55,6 @@ To run TeamSBC on virtual machines we provide the `virt` image type for the [sta
 
 ### Single Board Computers
 
-#### Raspberry Pi Zero 2 W
-
-To run TeamSBC on the Raspberry Pi Zero 2 W we provide the `rpi02w` image type for the [legacy](../getting-started/variants.md#legacy) variant. You can download the latest built images from the following URLs.
-
-#### Stable
-
-##### aarch64
-
-- [TeamSBC 44 Legacy (rpi02w, aarch64)](https://artifacts.teamsbc.net/main/latest/44/aarch64/teamsbc-44-legacy-rpi02w-aarch64.raw.xz)
-
-#### Experimental
-
-##### aarch64
-
-- [TeamSBC 45 Legacy (rpi02w, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-legacy-rpi02w-aarch64.raw.xz)
-
-#### Raspberry Pi 3
-
-To run TeamSBC on the Raspberry Pi 3 we provide the `rpi3` image type for the [legacy](../getting-started/variants.md#legacy) variant. You can download the latest built images from the following URLs.
-
-#### Stable
-
-##### aarch64
-
-- [TeamSBC 44 Legacy (rpi3, aarch64)](https://artifacts.teamsbc.net/main/latest/44/aarch64/teamsbc-44-legacy-rpi3-aarch64.raw.xz)
-
-#### Experimental
-
-##### aarch64
-
-- [TeamSBC 45 Legacy (rpi3, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-legacy-rpi3-aarch64.raw.xz)
-
 #### Raspberry Pi 4
 
 To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for the [standard](../getting-started/variants.md#standard) variant. You can download the latest built images from the following URLs.
