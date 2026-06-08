@@ -1,5 +1,21 @@
 /* CSS for UI elements (a.k.a. chrome) */
 
+.sidebar-logo {
+    text-align: center;
+    padding: calc(1rem + 8px) 1rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: var(--sidebar-bg);
+}
+.sidebar-logo img {
+    max-width: 50%;
+    border-radius: 999px;
+    border: 2px solid var(--sidebar-fg);
+}
+
 html {
     scrollbar-color: var(--scrollbar) transparent;
 }
@@ -492,6 +508,7 @@ html:not(.sidebar-resizing) .sidebar {
     left: 0;
     right: 0;
     padding: 10px 10px;
+    padding-top: calc(50% + 2rem);
 }
 .sidebar .sidebar-resize-handle {
     position: absolute;
