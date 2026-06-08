@@ -1,7 +1,7 @@
 /* CSS for UI elements (a.k.a. chrome) */
 
 .sidebar-logo {
-    text-align: center;
+    text-align: left;
     padding: calc(1rem + 8px) 1rem 1rem;
     position: absolute;
     top: 0;
