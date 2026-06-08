@@ -8,8 +8,11 @@ Bugs and feature requests should be submitted to the dedicated [distribution bug
 
 Long-form discussions about project direction and large changes takes place on [GitHub Discussions](https://github.com/orgs/teamsbc/discussions).
 
+You can also join the [#teamsbc:fedora.im](https://matrix.to/#/#teamsbc:fedora.im) Matrix channel for more casual chat.
+
 ## Social Media
 
 Project updates are also published on social media, if that's your preferred way of keeping up. Here's a list of TeamSBC's official media accounts.
 
 - [BlueSky](https://bsky.app/profile/teamsbc.org)
+- [Mastodon](https://mastodon.social/@teamsbc)
