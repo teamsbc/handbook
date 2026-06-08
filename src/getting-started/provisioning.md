@@ -2,6 +2,10 @@
 
 Setting up your device with credentials and configuration so it can be used immediately is what is called provisioning. There are multiple ways to do so.
 
+When building [customized images](../customization/build-your-own.md) you can perform the above steps during the build process. Provisioning such as described here is for per-deployment configuration while doing customized builds is for configuration to be used in multiple deployments.
+
+Good examples of per-deployment configuration is setting passwords or network credentials while multiple deployments might involve the packages installed on the systems. Use your own judgement.
+
 ## Online Provisioning
 
 The standard process of setting up your device is through guided prompts provided by `systemd-firstboot` during the first time your device boots. To do so you will need to connect a monitor or serial to your device.
@@ -32,3 +36,4 @@ $ sudo systemctl \
   --image teamsbc-44-standard-rpi4.raw \
   enable sshd.service
 ```
+
