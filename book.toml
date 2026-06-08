@@ -2,3 +2,7 @@
 title = "TeamSBC Handbook"
 authors = ["Simon de Vlieger"]
 language = "en"
+
+[output.html]
+git-repository-url = "https://github.com/teamsbc/handbook"
+edit-url-template = "https://github.com/teamsbc/handbook/edit/main/{path}"
