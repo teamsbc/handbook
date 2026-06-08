@@ -24,3 +24,11 @@ $ sudo systemd-firstboot \
 ```
 
 More options are available to be configured, but they won't hold the boot process from continuing.
+
+When doing offline provisioning you likely want to enable the `sshd` service on the system as well so you can login after it comes online. You can do so with:
+
+```
+$ sudo systemctl \
+  --image teamsbc-44-standard-rpi4.raw \
+  enable sshd.service
+```
