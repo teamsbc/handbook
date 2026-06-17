@@ -26,6 +26,10 @@ If you are a Fedora user or have used it previously then it's useful to know wha
 
 TeamSBC prefers to use `systemd` functionality when possible. This leads to a smaller and more integrated system.
 
+#### `systemd-boot`
+
+TeamSBC uses `systemd-boot` as its bootloader; this means it only works on UEFI capable systems.
+
 #### `systemd-homed`
 
 Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers to use it whenever possible to manage local users. See [managing users](./maintenance/users.md) for more information on how to use `systemd-homed`.
