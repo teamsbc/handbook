@@ -70,3 +70,20 @@ To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for the [s
 ##### aarch64
 
 - [TeamSBC 45 Standard (rpi4, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-standard-rpi4-aarch64.raw.xz)
+
+
+#### Raspberry Pi 4
+
+To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for the [standard](../getting-started/variants.md#standard) variant. You can download the latest built images from the following URLs.
+
+#### Stable
+
+##### aarch64
+
+- [TeamSBC 44 Standard (rpi5, aarch64)](https://artifacts.teamsbc.net/main/latest/44/aarch64/teamsbc-44-standard-rpi5-aarch64.raw.xz)
+
+#### Experimental
+
+##### aarch64
+
+- [TeamSBC 45 Standard (rpi5, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-standard-rpi5-aarch64.raw.xz)
