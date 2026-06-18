@@ -6,9 +6,9 @@ You can read this chapter to learn:
 
 - What TeamSBC is.
 - How TeamSBC relates to Fedora.
-- The history of TeamSBC.
 - The goals of TeamSBC.
 - Where the name TeamSBC comes from.
+- The history of TeamSBC.
 
 ## What is TeamSBC?
 
@@ -20,7 +20,7 @@ TeamSBC is a Fedora Remix. This means that it takes its packages from Fedora but
 
 ## Differences with Fedora
 
-If you are a Fedora user or have used it previously then it's useful to know what the differences are.
+If you are a Fedora user or have used it previously then it's useful to know that there are differences and of course what those differences are.
 
 ### `systemd`
 
@@ -40,10 +40,14 @@ Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`
 
 #### `sudo`
 
-TeamSBC does not include `sudo` by default instead it uses `run0`.
-
-## History of TeamSBC
+TeamSBC does not include `sudo` by default instead you can use `run0`.
 
 ## Goals of TeamSBC
 
+To provide an integrated, simplistic, minimal, and upstream based approach to running your favorite single board computers in a reliable and safe way.
+
 ## What does the name mean?
+
+The name comes from what the distribution targets. SBC stands for Single Board Computer, these are small computers such as the Raspberry Pi series of devices, various Radxa boards, or others. The team part comes from, well, team.
+
+## History of TeamSBC
