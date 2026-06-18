@@ -14,6 +14,8 @@ During the boot process you will be prompted for the timezone and root password 
 
 ## Offline Provisioning
 
+> **Warning**. If you provision your image offline using `systemd` tooling (as documented here) you must create the `.autorelabel` file in the filesystem root of the image. This is due to [a bug in `systemd`](https://github.com/systemd/systemd/issues/42643) where it assigns the wrong SELinux contexts to certain files. This will incur an additional reboot when you boot your image for the first time. See [auto-relabeling](#autorelabel) for how to do so.
+
 If you want the device to finish its boot without having to connect peripherals to it you can also pre-customize the image before flashing it onto your storage media.
 
 To prevent the online provisioning through `systemd-firstboot` you want to set at least the timezone and the root password on an image before writing it to your storage media.
@@ -37,3 +39,16 @@ $ sudo systemctl \
   enable sshd.service
 ```
 
+### Auto Relabeling
+
+Due to the handling of SELinux labeling in `systemd`-related tooling you will need to touch the `.autorelabel` file in the filesystem root of your image if you have performed any of the above actions. This will incur a reboot during the first boot of your system and take some time.
+
+You can instruct the image to relabel all contexts with the following command:
+
+```
+$ touch autorelabel
+$ sudo systemd-dissect --copy-to teamsbc-44-standard-rpi4.raw autorelabel /.autorelabel
+$ rm autorelabel
+```
+
+For more information you can read the related [TeamSBC Bug](https://github.com/teamsbc/distribution/issues/29) or [`systemd` bug](https://github.com/systemd/systemd/issues/42643).
