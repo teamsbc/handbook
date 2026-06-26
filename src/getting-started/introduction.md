@@ -49,5 +49,3 @@ To provide an integrated, simplistic, minimal, and upstream based approach to ru
 ## What does the name mean?
 
 The name comes from what the distribution targets. SBC stands for Single Board Computer, these are small computers such as the Raspberry Pi series of devices, various Radxa boards, or others. The team part comes from, well, team.
-
-## History of TeamSBC
