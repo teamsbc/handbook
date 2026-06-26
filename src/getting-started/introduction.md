@@ -35,7 +35,7 @@ Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers
 
 #### `systemd-networkd`
 
-Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks](../maintenance/networking.md) how this works.
+Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks](../maintenance/networking.md) for how this works.
 
 #### `sudo`
 
