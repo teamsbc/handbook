@@ -8,7 +8,6 @@ You can read this chapter to learn:
 - How TeamSBC relates to Fedora.
 - The goals of TeamSBC.
 - Where the name TeamSBC comes from.
-- The history of TeamSBC.
 
 ## What is TeamSBC?
 
@@ -32,11 +31,11 @@ TeamSBC uses `systemd-boot` as its bootloader; this means it only works on UEFI 
 
 #### `systemd-homed`
 
-Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers to use it whenever possible to manage local users. See [managing users](./maintenance/users.md) for more information on how to use `systemd-homed`.
+Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers to use it whenever possible to manage local users. See [managing users](../maintenance/users.md) for more information on how to use `systemd-homed`.
 
 #### `systemd-networkd`
 
-Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks](./maintenance/networking.md) how this works.
+Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks](../maintenance/networking.md) how this works.
 
 #### `sudo`
 

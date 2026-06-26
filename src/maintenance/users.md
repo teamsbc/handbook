@@ -9,8 +9,7 @@ The preferred way in TeamSBC to manage local users is by using `systemd-homed`. 
 ### Adding a user
 
 ```console
-$ homectl create $username
-# pick a password
+$ run0 homectl create $username
 ```
 
 ### Removing a user
@@ -20,11 +19,11 @@ Removing users is a destructive action. Their home area will be destroyed and th
 If you are certain you want to remove the user you can use the following command. **There is no confirmation prompt, the user will be gone immediately.**
 
 ```console
-$ homectl remove $username
+$ run0 homectl remove $username
 ```
 
 ### Inspecting a user
 
 ```console
-$ homectl inspect $username
+$ run0 homectl inspect $username
 ```
