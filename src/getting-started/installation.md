@@ -13,6 +13,7 @@ Installation steps are the same for all TeamSBC variants.
 
 If you wish this is the time to perform [offline provisioning](./provisioning.md#offline-provisioning) on the disk image.
 
+> [!TIP]
 > When testing out in a virtual machine; point your preferred virtual machine manager at the disk image and run, otherwise continue on.
 
 ### microSD

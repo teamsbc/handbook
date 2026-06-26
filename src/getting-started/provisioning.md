@@ -14,7 +14,8 @@ During the boot process you will be prompted for the timezone and root password 
 
 ## Offline Provisioning
 
-> **Warning**. If you provision your image offline using `systemd` tooling (as documented here) you must create the `.autorelabel` file in the filesystem root of the image. This is due to [a bug in `systemd`](https://github.com/systemd/systemd/issues/42643) where it assigns the wrong SELinux contexts to certain files. This will incur an additional reboot when you boot your image for the first time. See [auto-relabeling](#auto-relabeling) for how to do so.
+> [!WARNING]
+> If you provision your image offline using `systemd` tooling (as documented here) you must create the `.autorelabel` file in the filesystem root of the image. This is due to [a bug in `systemd`](https://github.com/systemd/systemd/issues/42643) where it assigns the wrong SELinux contexts to certain files. This will incur an additional reboot when you boot your image for the first time. See [auto-relabeling](#auto-relabeling) for how to do so.
 
 If you want the device to finish its boot without having to connect peripherals to it you can also pre-customize the image before flashing it onto your storage media.
 
