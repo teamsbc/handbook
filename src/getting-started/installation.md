@@ -21,7 +21,7 @@ If you wish this is the time to perform [offline provisioning](./provisioning.md
 Most Single Board Computers have some form of external storage, commonly a microSD card. Put a microSD card into a card reader attached to your computer. After this you can write the downloaded image directly onto the microSD card. This method applies to most Single Board Computers that have microSD storage.
 
 3. Find the device for your microSD card (let's say it's `/dev/sde`).
-4. Write the image onto the microSD card, `dd if=teamsbc-44-standard-rpi4.raw of=/dev/sde status=progress`.
+4. Write the image onto the microSD card, `dd if=teamsbc-44-standard-rpi4.raw of=/dev/sde bs=4M conv=fsync status=progress`.
 
 After the image has been written to your microSD card you can unmount your card and plug it into your device to boot from.
 
