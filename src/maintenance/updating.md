@@ -1,7 +1,7 @@
 # Updating
 
 > [!NOTE]
-> This section applies to the [Standard](../getting-started/variants.md#standard) variant.
+> This section applies to the [Lhotse](../getting-started/variants.md#lhotse) variant.
 
 Keeping your system up to date is important for security and stability. TeamSBC uses `dnf` for package management.
 

@@ -1,7 +1,7 @@
 # Installing Applications
 
 > [!NOTE]
-> This section applies to the [Standard](../getting-started/variants.md#standard) variant.
+> This section applies to the [Standard](../getting-started/variants.md#lhotse) variant.
 
 The Standard variant is package-based and uses `dnf` for package management.
 

@@ -25,7 +25,7 @@ You can use the `systemd-firstboot --image` to do so:
 
 ```
 $ sudo systemd-firstboot \
-  --image teamsbc-44-standard-rpi4.raw \
+  --image teamsbc-44-lhotse-rpi4.raw \
   --prompt-root-password \
   --prompt-timezone
 ```
@@ -36,7 +36,7 @@ When doing offline provisioning you likely want to enable the `sshd` service on 
 
 ```
 $ sudo systemctl \
-  --image teamsbc-44-standard-rpi4.raw \
+  --image teamsbc-44-lhotse-rpi4.raw \
   enable sshd.service
 ```
 
@@ -48,7 +48,7 @@ You can instruct the image to relabel all contexts with the following command:
 
 ```
 $ touch autorelabel
-$ sudo systemd-dissect --copy-to teamsbc-44-standard-rpi4.raw autorelabel /.autorelabel
+$ sudo systemd-dissect --copy-to teamsbc-44-lhotse-rpi4.raw autorelabel /.autorelabel
 $ rm autorelabel
 ```
 
