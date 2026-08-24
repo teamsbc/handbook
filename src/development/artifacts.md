@@ -10,10 +10,10 @@ Artifacts are organized by branch, Fedora version, and architecture:
 artifacts.teamsbc.net/
   main/
     latest/
-      44/
+      45/
         aarch64/
         x86_64/
-      45/
+      46/
         aarch64/
         x86_64/
 ```
