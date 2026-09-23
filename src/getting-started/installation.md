@@ -33,16 +33,6 @@ Find the device you want to run TeamSBC on in the following list. If your device
 
 To run TeamSBC on virtual machines we provide the `virt` image type for the [lhotse](../getting-started/variants.md#lhotse) variant. You can download the latest built images from the following URLs:
 
-#### Stable
-
-##### x86_64
-
-- [TeamSBC 45 Lhotse (virt, x86_64)](https://artifacts.teamsbc.net/main/latest/45/x86_64/teamsbc-45-lhotse-virt-x86_64.raw.xz)
-
-##### aarch64
-
-- [TeamSBC 45 Lhotse (virt, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-lhotse-virt-aarch64.raw.xz)
-
 #### Experimental
 
 ##### x86_64
@@ -59,12 +49,6 @@ To run TeamSBC on virtual machines we provide the `virt` image type for the [lho
 
 To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for the [lhotse](../getting-started/variants.md#lhotse) variant. You can download the latest built images from the following URLs.
 
-#### Stable
-
-##### aarch64
-
-- [TeamSBC 45 Lhotse (rpi4, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-lhotse-rpi4-aarch64.raw.xz)
-
 #### Experimental
 
 ##### aarch64
@@ -75,12 +59,6 @@ To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for the [l
 #### Raspberry Pi 5
 
 To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for the [lhotse](../getting-started/variants.md#lhotse) variant. You can download the latest built images from the following URLs.
-
-#### Stable
-
-##### aarch64
-
-- [TeamSBC 45 Lhotse (rpi5, aarch64)](https://artifacts.teamsbc.net/main/latest/45/aarch64/teamsbc-45-lhotse-rpi5-aarch64.raw.xz)
 
 #### Experimental
 
