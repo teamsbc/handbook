@@ -37,11 +37,11 @@ To run TeamSBC on virtual machines we provide the `virt` image type for the [lho
 
 ##### x86_64
 
-- [TeamSBC 46 Lhotse (virt, x86_64)](https://artifacts.teamsbc.net/main/latest/46/x86_64/teamsbc-46-lhotse-virt-x86_64.raw.xz)
+- [TeamSBC 46 Lhotse (virt, x86_64)](https://artifacts.teamsbc.net/main/46/x86_64/teamsbc-lhotse-virt/index.html)
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (virt, aarch64)](https://artifacts.teamsbc.net/main/latest/46/aarch64/teamsbc-46-lhotse-virt-aarch64.raw.xz)
+- [TeamSBC 46 Lhotse (virt, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-virt/index.html)
 
 ### Single Board Computers
 
@@ -53,7 +53,7 @@ To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for the [l
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (rpi4, aarch64)](https://artifacts.teamsbc.net/main/latest/46/aarch64/teamsbc-46-lhotse-rpi4-aarch64.raw.xz)
+- [TeamSBC 46 Lhotse (rpi4, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-rpi4/index.html)
 
 
 #### Raspberry Pi 5
@@ -64,4 +64,4 @@ To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for the [l
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (rpi5, aarch64)](https://artifacts.teamsbc.net/main/latest/46/aarch64/teamsbc-46-lhotse-rpi5-aarch64.raw.xz)
+- [TeamSBC 46 Lhotse (rpi5, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-rpi5/index.html)
