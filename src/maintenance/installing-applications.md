@@ -1,30 +1,8 @@
-# Installing Applications
+---
+search: false
+prev: false
+next: false
+---
 
-> [!NOTE]
-> This section applies to the [Standard](../getting-started/variants.md#lhotse) variant.
-
-The Standard variant is package-based and uses `dnf` for package management.
-
-## Searching for packages
-
-```console
-$ dnf search htop
-```
-
-## Installing a package
-
-```console
-$ run0 dnf install htop
-```
-
-## Removing a package
-
-```console
-$ run0 dnf remove htop
-```
-
-## Listing installed packages
-
-```console
-$ dnf list --installed
-```
+<!-- Preserve the original maintenance URL using the Lhotse source. -->
+<!--@include: ./lhotse/installing-applications.md-->

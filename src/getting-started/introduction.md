@@ -31,11 +31,11 @@ TeamSBC uses `systemd-boot` as its bootloader; this means it only works on UEFI 
 
 #### `systemd-homed`
 
-Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers to use it whenever possible to manage local users. See [managing users](../maintenance/users.md) for more information on how to use `systemd-homed`.
+Fedora doesn't use `systemd-homed` by default. TeamSBC has it set up and prefers to use it whenever possible to manage local users. See [managing users on Lhotse](../maintenance/lhotse/users.md) or [managing users on Makalu](../maintenance/makalu/users.md) for instructions for your variant.
 
 #### `systemd-networkd`
 
-Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks](../maintenance/networking.md) for how this works.
+Fedora uses `NetworkManager` to manage networks, TeamSBC uses `systemd-networkd`. See [managing networks on Lhotse](../maintenance/lhotse/networking.md) or [managing networks on Makalu](../maintenance/makalu/networking.md) for instructions for your variant.
 
 #### `sudo`
 

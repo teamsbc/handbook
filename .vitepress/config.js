@@ -21,7 +21,11 @@ export default defineConfig({
     ],
     editLink: {
       pattern: ({ relativePath }) => {
-        const path = relativePath === 'handbook/index.md' ? 'index.md' : relativePath
+        let path = relativePath === 'handbook/index.md' ? 'index.md' : relativePath
+        // Legacy maintenance pages include the corresponding Lhotse source.
+        if (/^maintenance\/[^/]+\.md$/.test(path)) {
+          path = path.replace('maintenance/', 'maintenance/lhotse/')
+        }
         return `https://github.com/teamsbc/handbook/edit/main/src/${path}`
       },
       text: 'Edit this page on GitHub'
@@ -48,11 +52,28 @@ export default defineConfig({
       {
         text: 'Maintenance',
         items: [
-          { text: 'Basics', link: '/maintenance/basics' },
-          { text: 'Updating', link: '/maintenance/updating' },
-          { text: 'Installing Applications', link: '/maintenance/installing-applications' },
-          { text: 'Users', link: '/maintenance/users' },
-          { text: 'Networking', link: '/maintenance/networking' }
+          {
+            text: 'Lhotse',
+            collapsed: false,
+            items: [
+              { text: 'Basics', link: '/maintenance/lhotse/basics' },
+              { text: 'Updating', link: '/maintenance/lhotse/updating' },
+              { text: 'Installing Applications', link: '/maintenance/lhotse/installing-applications' },
+              { text: 'Users', link: '/maintenance/lhotse/users' },
+              { text: 'Networking', link: '/maintenance/lhotse/networking' }
+            ]
+          },
+          {
+            text: 'Makalu',
+            collapsed: false,
+            items: [
+              { text: 'Basics', link: '/maintenance/makalu/basics' },
+              { text: 'Updating', link: '/maintenance/makalu/updating' },
+              { text: 'Installing Applications', link: '/maintenance/makalu/installing-applications' },
+              { text: 'Users', link: '/maintenance/makalu/users' },
+              { text: 'Networking', link: '/maintenance/makalu/networking' }
+            ]
+          }
         ]
       },
       {
