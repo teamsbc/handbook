@@ -73,6 +73,6 @@ CI renames outputs, separates images from updates and extensions, generates chec
 
 ## Making Changes
 
-Start with the smallest definition that owns the behavior you want to change. Package selection belongs in package sets; board boot files belong in platform definitions; persistent configuration delivered by an RPM belongs in the [packages repository](./packages.md).
+Start with the smallest change to definitions necessary for the behavior you want to change. Package selection belongs in package sets; board boot files belong in platform definitions; persistent configuration delivered by an RPM belongs in the [packages repository](./packages.md).
 
 For Makalu, keep image identity and version handling consistent across the disk layout, boot configuration, update payloads, and extensions. A successful build is the start of things: boot the result and try the behavior you changed as described in [testing](./testing.md).
