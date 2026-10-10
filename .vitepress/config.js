@@ -23,17 +23,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/teamsbc/handbook' }
     ],
-    editLink: {
-      pattern: ({ relativePath }) => {
-        let path = relativePath === 'handbook/index.md' ? 'index.md' : relativePath
-        // Legacy maintenance pages include the corresponding Lhotse source.
-        if (/^maintenance\/[^/]+\.md$/.test(path)) {
-          path = path.replace('maintenance/', 'maintenance/lhotse/')
-        }
-        return `https://github.com/teamsbc/handbook/edit/main/src/${path}`
-      },
-      text: 'Edit this page on GitHub'
-    },
     search: { provider: 'local' },
     sidebar: [
       { text: 'Handbook', link: '/' },
