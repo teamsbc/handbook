@@ -16,6 +16,10 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo.png',
+    nav: [
+      { text: 'Home', link: 'https://teamsbc.org' },
+      { text: 'Handbook', link: '/', activeMatch: '/' }
+    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/teamsbc/handbook' }
     ],
