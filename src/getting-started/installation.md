@@ -35,7 +35,7 @@ To run TeamSBC on virtual machines we provide the `virt` image type for the [lho
 
 #### Experimental
 
-##### x86_64
+##### x86_64 {#x86_64}
 
 - [TeamSBC 46 Lhotse (virt, x86_64)](https://artifacts.teamsbc.net/main/46/x86_64/teamsbc-lhotse-virt/index.html)
 
