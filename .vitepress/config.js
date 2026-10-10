@@ -47,7 +47,7 @@ export default defineConfig({
         items: [
           {
             text: 'Lhotse',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Basics', link: '/maintenance/lhotse/basics' },
               { text: 'Updating', link: '/maintenance/lhotse/updating' },
@@ -58,7 +58,7 @@ export default defineConfig({
           },
           {
             text: 'Makalu',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Basics', link: '/maintenance/makalu/basics' },
               { text: 'Updating', link: '/maintenance/makalu/updating' },
