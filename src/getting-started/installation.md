@@ -79,7 +79,7 @@ Find the device you want to run TeamSBC on in the following list. If your device
 
 ### Virtual Machine
 
-To run TeamSBC on virtual machines we provide the `virt` image type for [Lhotse](./variants.md#lhotse) on `x86_64` and `aarch64`, and for [Makalu](./variants.md#makalu) on `x86_64`. You can download the latest built images from the following URLs:
+To run TeamSBC on virtual machines we provide the `virt` image type for both [Lhotse](./variants.md#lhotse) and [Makalu](./variants.md#makalu) on `x86_64` and `aarch64`. You can download the latest built images from the following URLs:
 
 #### Experimental
 
@@ -91,6 +91,7 @@ To run TeamSBC on virtual machines we provide the `virt` image type for [Lhotse]
 ##### aarch64
 
 - [TeamSBC 46 Lhotse (virt, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-virt/index.html)
+- [TeamSBC 46 Makalu (virt, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-makalu-virt/index.html)
 
 ### Single Board Computers
 
@@ -108,10 +109,11 @@ To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for both [
 
 #### Raspberry Pi 5
 
-To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for the [lhotse](../getting-started/variants.md#lhotse) variant. You can download the latest built images from the following URLs.
+To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for both [Lhotse](./variants.md#lhotse) and [Makalu](./variants.md#makalu). You can download the latest built images from the following URLs.
 
 #### Experimental
 
 ##### aarch64
 
 - [TeamSBC 46 Lhotse (rpi5, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-rpi5/index.html)
+- [TeamSBC 46 Makalu (rpi5, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-makalu-rpi5/index.html)
