@@ -8,7 +8,7 @@ The handbook separates maintenance instructions for **Lhotse** and **Makalu**. R
 
 | | Lhotse | Makalu |
 | --- | --- | --- |
-| System management | Package-based | Image-based |
+| System management | Package-based | Cohesive |
 | Approach to changes | Install, remove, and update individual packages | Designed around replacing a versioned system image |
 | Package tooling | Uses `dnf` | Uses `updatectl` |
 | Maintenance documentation | Covers updates, applications, users, and networking | Still being written |
@@ -25,16 +25,16 @@ See [updating Lhotse](../maintenance/lhotse/updating.md) and [installing applica
 
 ## Makalu
 
-Makalu is the image-based variant. Its intended maintenance model treats the operating system as a versioned image, with system updates replacing that image rather than updating individual packages in place.
+Makalu is the cohesive variant. Its intended maintenance model treats the operating system as a versioned whole, with system updates replacing the system image rather than updating individual packages in place.
 
 That model changes how you think about modifying and maintaining a device. Decisions about what belongs in the operating system image become part of preparing that image, and you should not carry over Lhotse's `dnf` procedures without checking the Makalu documentation.
 
-Makalu's maintenance procedures are still being documented. The update and application chapters are incomplete, so treat the image-based model described here as a work in progress.
+Makalu's maintenance procedures are still being documented. The update and application chapters are incomplete, so treat the cohesive model described here as a work in progress.
 
 See [updating Makalu](../maintenance/makalu/updating.md) and [installing applications on Makalu](../maintenance/makalu/installing-applications.md).
 
 ## Choosing a Variant
 
-If you want to get started with the installation and maintenance procedures currently documented here, Lhotse is the straightforward starting point. If you are interested in exploring or contributing to the image-based approach, read the Makalu chapters and [talk with the community](../preface/community.md) about the work in progress.
+If you want to get started with the installation and maintenance procedures currently documented here, Lhotse is the straightforward starting point. If you are interested in exploring or contributing to the cohesive approach, read the Makalu chapters and [talk with the community](../preface/community.md) about the work in progress.
 
 Once you have chosen a variant, continue to [installation](./installation.md) to find an image for your device and prepare it for booting.

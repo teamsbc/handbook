@@ -1,6 +1,6 @@
 # Artifacts
 
-Artifacts are the outputs of TeamSBC's image builds. The main output is a compressed raw disk image for a particular variant, device type, and architecture. Makalu builds also export components used for image-based updates, and definitions produce system extensions as well.
+Artifacts are the outputs of TeamSBC's image builds. The main output is a compressed raw disk image for a particular variant, device type, and architecture. Makalu builds also export components used for cohesive updates, and definitions produce system extensions as well.
 
 The [artifacts repository](https://github.com/teamsbc/artifacts) contains the definitions and workflows that produce these files. The [build system](./build-system.md) chapter explains how those definitions fit together and how to build an image locally.
 
