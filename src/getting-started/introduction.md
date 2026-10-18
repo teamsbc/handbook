@@ -54,6 +54,10 @@ TeamSBC does not include `sudo` by default. Use `run0` when you need to run a co
 
 Some installation and provisioning examples in this handbook use `sudo` on the computer preparing an image. Those commands run on your host computer, whose tools may differ from the TeamSBC system you are setting up.
 
+#### `firewalld`
+
+TeamSBC does not include `firewalld` by default. Instead it provides the `nftables` userland utilities to manage firewall rules.
+
 ## Goals of TeamSBC
 
 The goal is to provide a simple, minimal, integrated approach to running your favorite single board computers reliably and safely. TeamSBC aims to build on upstream projects and use their functionality directly where it fits the distribution's needs.
