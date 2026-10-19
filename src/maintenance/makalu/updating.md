@@ -27,3 +27,11 @@ You should always reboot after updates for updates to take effect
 ```console
 # systemctl reboot
 ```
+
+## Automatic Updates
+
+If you want your system to apply updates automatically you can enable the `systemd-sysupdate.timer`.
+
+```console
+# systemctl enable systemd-sysupdate.timer
+```
