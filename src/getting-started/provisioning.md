@@ -59,7 +59,7 @@ This enables `sshd` for subsequent boots of the TeamSBC installation. It does no
 
 Enabling the service is only part of preparing remote access. The device also needs a working network connection and an account whose authentication is allowed by its SSH configuration. Setting the root password alone does not guarantee remote root login. If you have not prepared those details, keep a console available for the first boot so you can finish the setup.
 
-See [networking on Lhotse](../maintenance/lhotse/networking.md) and [users on Lhotse](../maintenance/lhotse/users.md) for the documented configuration procedures. The corresponding [Makalu networking](../maintenance/makalu/networking.md) and [user-management](../maintenance/makalu/users.md) chapters are still being written.
+See [users on Lhotse](../maintenance/lhotse/users.md) or [users on Makalu](../maintenance/makalu/users.md) for user-management instructions. Networking is documented in [networking on Lhotse](../maintenance/lhotse/networking.md); the corresponding [Makalu networking](../maintenance/makalu/networking.md) chapter is still being written.
 
 ### Auto Relabeling
 
