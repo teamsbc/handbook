@@ -17,6 +17,9 @@ Here, online provisioning means interactive setup on the running device; it does
 
 ## Online Provisioning
 
+> [!NOTE]
+> `systemd-firstboot` only shows its prompts on the console. On Single Board Computers this usually means the serial console. Hence if you use this you need to attach to the UART of your board and often can't use HDMI or an attached screen.
+
 The standard setup uses guided prompts from `systemd-firstboot` the first time your device boots. Connect a display and keyboard or a serial console before powering it on. When using a virtual machine, open its console.
 
 During boot, you will be asked to choose a timezone and set the root password. That password is for the TeamSBC installation you are setting up. Keep it available for your first login and subsequent administration.
