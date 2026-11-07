@@ -4,18 +4,23 @@
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
 > For the other variant, see [Users on Lhotse](/maintenance/lhotse/users.md).
 
-Makalu uses the same `systemd-homed` workflow as Lhotse for managing local users
-and their home areas. `systemd-homed` supports portable, encrypted home areas
-that are unlocked when the user logs in. Both variants enable its integration
-with the system's login configuration.
+TeamSBC prefers `systemd-homed` for managing regular local users and their home
+areas. It supports portable home areas that can be encrypted and unlocked when
+the user logs in; encryption depends on the selected storage type. TeamSBC
+integrates `systemd-homed` with local and remote logins.
 
-Use `homectl` to manage these regular user accounts. The account records and home
-data are stored outside Makalu's versioned `/usr` partition and are preserved
-during normal OS updates.
+Traditional tools such as `useradd` and `passwd` can also manage conventional
+accounts when available. `homectl` manages `systemd-homed` accounts, not those
+traditional accounts.
 
-The examples below use `alice`; replace it with your chosen username. Run the administrative commands from a root shell.
+On Makalu, user records and home data are stored outside the versioned `/usr`
+partition and are preserved during normal OS updates.
 
-## Adding a user
+The examples below use `alice`; replace it with your chosen username.
+
+## Managing Users
+
+### Adding a user
 
 Create the user account and its home area:
 
@@ -25,7 +30,7 @@ $ homectl create alice
 
 Follow the prompts to set the user's password.
 
-## Logging in
+### Logging in
 
 The user can log in at the console or through SSH with the same username and
 password. The home area is activated during login.
@@ -43,15 +48,14 @@ $ ssh alice@device-address
 ```
 
 Replace `device-address` with the device's hostname or IP address. The device must
-be reachable over the network, and its SSH configuration must allow password
-authentication through PAM.
+be reachable over the network.
 
 For an encrypted home area, the login password also supplies the credential used
 to unlock it through
 [pam_systemd_home(8)](https://www.freedesktop.org/software/systemd/man/latest/pam_systemd_home.html).
 SSH public-key authentication alone cannot unlock a locked, encrypted home area.
 
-## Listing users
+### Listing users
 
 List the accounts managed by `systemd-homed`:
 
@@ -62,7 +66,7 @@ $ homectl list
 This list does not include traditional accounts such as `root` or system service
 accounts.
 
-## Inspecting a user
+### Inspecting a user
 
 Show the account details, home storage type, and current state:
 
@@ -70,7 +74,7 @@ Show the account details, home storage type, and current state:
 $ homectl inspect alice
 ```
 
-## Removing a user
+### Removing a user
 
 > [!WARNING]
 > Removing a user also deletes their home area and all data in it. There is no

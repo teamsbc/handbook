@@ -4,30 +4,88 @@
 > This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
 > For the other variant, see [Users on Makalu](/maintenance/makalu/users.md).
 
-*You are able to manage users in more traditional ways through the `shadow-utils` provided tooling (`useradd`, `passwd`, etc) but TeamSBC intends for you to manage users through `systemd-homed`.*
+TeamSBC prefers `systemd-homed` for managing regular local users and their home
+areas. It supports portable home areas that can be encrypted and unlocked when
+the user logs in; encryption depends on the selected storage type. TeamSBC
+integrates `systemd-homed` with local and remote logins.
 
-The preferred way in TeamSBC to manage local users is by using `systemd-homed`. This allows for portable, encrypted home directories for each user which get unlocked on user login. TeamSBC is configured to allow local and remote logins to `systemd-homed` managed users by default.
+Traditional tools such as `useradd` and `passwd` can also manage conventional
+accounts when available. `homectl` manages `systemd-homed` accounts, not those
+traditional accounts.
+
+On Makalu, user records and home data are stored outside the versioned `/usr`
+partition and are preserved during normal OS updates.
+
+The examples below use `alice`; replace it with your chosen username.
 
 ## Managing Users
 
 ### Adding a user
 
+Create the user account and its home area:
+
 ```console
-$ homectl create $username
+$ homectl create alice
+```
+
+Follow the prompts to set the user's password.
+
+### Logging in
+
+The user can log in at the console or through SSH with the same username and
+password. The home area is activated during login.
+
+For SSH access, enable and start the SSH server on the TeamSBC device:
+
+```console
+$ systemctl enable --now sshd.service
+```
+
+From another computer with an SSH client, connect to the device:
+
+```console
+$ ssh alice@device-address
+```
+
+Replace `device-address` with the device's hostname or IP address. The device must
+be reachable over the network.
+
+For an encrypted home area, the login password also supplies the credential used
+to unlock it through
+[pam_systemd_home(8)](https://www.freedesktop.org/software/systemd/man/latest/pam_systemd_home.html).
+SSH public-key authentication alone cannot unlock a locked, encrypted home area.
+
+### Listing users
+
+List the accounts managed by `systemd-homed`:
+
+```console
+$ homectl list
+```
+
+This list does not include traditional accounts such as `root` or system service
+accounts.
+
+### Inspecting a user
+
+Show the account details, home storage type, and current state:
+
+```console
+$ homectl inspect alice
 ```
 
 ### Removing a user
 
-Removing users is a destructive action. Their home area will be destroyed and thus all data in there will be gone forever. Think twice if this is what you want and consider making a backup of the relevant home area.
+> [!WARNING]
+> Removing a user also deletes their home area and all data in it. There is no
+> confirmation prompt. Back up any data you need before running the command.
 
-If you are certain you want to remove the user you can use the following command. **There is no confirmation prompt, the user will be gone immediately.**
-
-```console
-$ homectl remove $username
-```
-
-### Inspecting a user
+Have the user log out of all sessions, then remove the account from another
+root session:
 
 ```console
-$ homectl inspect $username
+$ homectl remove alice
 ```
+
+See [homectl(1)](https://www.freedesktop.org/software/systemd/man/latest/homectl.html)
+for more account and home-area management options.
