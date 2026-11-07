@@ -66,6 +66,6 @@ These goals guide the selection of components and defaults. They also leave room
 
 ## What does the name mean?
 
-The name comes from what the distribution targets. SBC stands for Single Board Computer: a small computer built around a single circuit board, such as devices in the Raspberry Pi series or various Radxa boards. The team part comes from, well, team. The [supported devices list](./installation.md#supported-devices) shows which devices have images available in this handbook.
+The name comes from what the distribution targets. SBC stands for Single Board Computer: a small computer built around a single circuit board, such as devices in the Raspberry Pi series or various Radxa boards. The team part comes from, well, team. The [supported devices list](./installation.md#supported-devices) shows which devices have images available in this handbook. For more information, see [Naming](../lore/naming.md).
 
 Next, read about the [variants](./variants.md) to choose the approach to system maintenance that you want to explore.

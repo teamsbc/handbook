@@ -95,6 +95,12 @@ export default defineConfig({
           { text: 'Build System', link: '/development/build-system' },
           { text: 'Testing', link: '/development/testing' }
         ]
+      },
+      {
+        text: 'Lore',
+        items: [
+          { text: 'Naming', link: '/lore/naming' }
+        ]
       }
     ]
   }
