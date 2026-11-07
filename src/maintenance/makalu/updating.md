@@ -1,14 +1,13 @@
 # Updating on Makalu
 
-For the other variant, see [Updating on Lhotse](/maintenance/lhotse/updating.md).
-
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
+> For the other variant, see [Updating on Lhotse](/maintenance/lhotse/updating.md).
 
 ## Checking for updates
 
 ```console
-# updatectl check
+$ updatectl check
 TARGET UPDATE                       
 host   46.20261003.0 → 46.20261010.0
 ```
@@ -16,7 +15,7 @@ host   46.20261003.0 → 46.20261010.0
 ## Updating the system
 
 ```console
-# updatectl update
+$ updatectl update
 host@46.20261010.0: ✓ Done
 ```
 
@@ -25,7 +24,7 @@ host@46.20261010.0: ✓ Done
 Reboot after installing an OS update to start using the new version.
 
 ```console
-# systemctl reboot
+$ systemctl reboot
 ```
 
 ## Automatic updates
@@ -33,7 +32,7 @@ Reboot after installing an OS update to start using the new version.
 To download and install updates automatically, enable and start the update timer:
 
 ```console
-# systemctl enable --now systemd-sysupdate-update.timer
+$ systemctl enable --now systemd-sysupdate-update.timer
 ```
 
 The default schedule runs the update service:
@@ -60,7 +59,7 @@ To reboot automatically when a newer OS version has been installed, enable and
 start the reboot timer as well:
 
 ```console
-# systemctl enable --now systemd-sysupdate-reboot.timer
+$ systemctl enable --now systemd-sysupdate-reboot.timer
 ```
 
 By default, this timer runs daily at 04:10 local time, with a random delay of up to
@@ -70,7 +69,7 @@ It does not reboot immediately after each update finishes.
 Check the scheduled update and reboot times with:
 
 ```console
-# systemctl list-timers 'systemd-sysupdate-*'
+$ systemctl list-timers 'systemd-sysupdate-*'
 ```
 
 See [systemd-sysupdate(8)](https://www.freedesktop.org/software/systemd/man/latest/systemd-sysupdate.html)

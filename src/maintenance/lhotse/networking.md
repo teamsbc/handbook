@@ -4,7 +4,9 @@ next: false
 
 # Networking on Lhotse {#networking}
 
-For the other variant, see [Networking on Makalu](/maintenance/makalu/networking.md).
+> [!NOTE]
+> This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> For the other variant, see [Networking on Makalu](/maintenance/makalu/networking.md).
 
 TeamSBC uses `systemd-networkd` for network configuration instead of `NetworkManager`. Network configuration files are placed in `/etc/systemd/network/`.
 
@@ -37,7 +39,7 @@ DNS=192.168.1.1
 After creating or modifying network configuration files restart `systemd-networkd`:
 
 ```console
-$ run0 systemctl restart systemd-networkd.service
+$ systemctl restart systemd-networkd.service
 ```
 
 ## Wi-Fi
@@ -49,13 +51,13 @@ Wi-Fi is managed through `wpa_supplicant` alongside `systemd-networkd`.
 Create a `wpa_supplicant` configuration for your wireless interface:
 
 ```console
-$ run0 wpa_passphrase "MyNetwork" "MyPassword" > /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+$ wpa_passphrase "MyNetwork" "MyPassword" > /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 
 Enable and start the `wpa_supplicant` service for your interface:
 
 ```console
-$ run0 systemctl enable --now wpa_supplicant@wlan0.service
+$ systemctl enable --now wpa_supplicant@wlan0.service
 ```
 
 Then create a `.network` file in `/etc/systemd/network/` for the wireless interface:

@@ -1,6 +1,8 @@
 # Users on Lhotse {#users}
 
-For the other variant, see [Users on Makalu](/maintenance/makalu/users.md).
+> [!NOTE]
+> This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> For the other variant, see [Users on Makalu](/maintenance/makalu/users.md).
 
 *You are able to manage users in more traditional ways through the `shadow-utils` provided tooling (`useradd`, `passwd`, etc) but TeamSBC intends for you to manage users through `systemd-homed`.*
 
@@ -11,7 +13,7 @@ The preferred way in TeamSBC to manage local users is by using `systemd-homed`. 
 ### Adding a user
 
 ```console
-$ run0 homectl create $username
+$ homectl create $username
 ```
 
 ### Removing a user
@@ -21,11 +23,11 @@ Removing users is a destructive action. Their home area will be destroyed and th
 If you are certain you want to remove the user you can use the following command. **There is no confirmation prompt, the user will be gone immediately.**
 
 ```console
-$ run0 homectl remove $username
+$ homectl remove $username
 ```
 
 ### Inspecting a user
 
 ```console
-$ run0 homectl inspect $username
+$ homectl inspect $username
 ```

@@ -1,11 +1,8 @@
-<span id="installing-applications-on-makalu"></span>
-
-# Applications
-
-For the other variant, see [Applications on Lhotse](/maintenance/lhotse/applications.md).
+# Applications on Makalu {#applications}
 
 > [!NOTE]
-> This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
+> <span id="installing-applications-on-makalu"></span>This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
+> For the other variant, see [Applications on Lhotse](/maintenance/lhotse/applications.md).
 
 Makalu provides optional applications as system extensions: images containing
 additional files that are made available in the running system's `/usr` directory.
@@ -42,7 +39,7 @@ rather than the version you are currently running.
 Enable the feature and download its extension immediately:
 
 ```console
-$ run0 updatectl enable tmux --now
+$ updatectl enable tmux --now
 host@46.20261014.0: ✓ Done
 Feature(s) downloaded.
 ```
@@ -53,7 +50,7 @@ is downloaded during the next OS update.
 Activate the downloaded extension in the running system:
 
 ```console
-$ run0 systemd-sysext refresh
+$ systemd-sysext refresh
 Using extensions 'tmux_46.20261014.0.sysext.raw'.
 Merged extensions into '/usr'.
 ```
@@ -65,7 +62,7 @@ To activate installed extensions automatically on subsequent boots, enable the
 system extension service once:
 
 ```console
-$ run0 systemctl enable systemd-sysext.service
+$ systemctl enable systemd-sysext.service
 ```
 
 ## Checking downloaded and active extensions
@@ -91,7 +88,7 @@ Exit any running `tmux` sessions, then disable the feature and request immediate
 cleanup of its downloaded images:
 
 ```console
-$ run0 updatectl disable tmux --now
+$ updatectl disable tmux --now
 ```
 
 TeamSBC's current extension configuration protects the image matching the running
@@ -100,8 +97,8 @@ OS version from automatic cleanup. This can leave that image installed even afte
 remove their files from the running system:
 
 ```console
-$ run0 rm -f -- /var/lib/extensions/tmux_*.sysext.raw
-$ run0 systemd-sysext refresh
+$ rm -f -- /var/lib/extensions/tmux_*.sysext.raw
+$ systemd-sysext refresh
 No extensions found.
 Unmerged '/usr'.
 ```

@@ -4,17 +4,25 @@ prev: false
 
 # Basics on Lhotse {#basics}
 
-For the other variant, see [Basics on Makalu](/maintenance/makalu/basics.md).
+> [!NOTE]
+> This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> For the other variant, see [Basics on Makalu](/maintenance/makalu/basics.md).
 
 This section covers fundamental system administration tasks on TeamSBC.
 
 ## Privilege Escalation
 
-TeamSBC does not include `sudo`. Instead you can use `run0` to run commands as root.
+TeamSBC does not include `sudo`. Use `run0` to run commands as root. For example, to set the hostname:
 
 ```console
 $ run0 hostnamectl set-hostname mydevice
 ```
+
+> [!NOTE]
+> Commands in the maintenance section are expected to be run as root, so the examples omit `run0`.
+
+> [!WARNING]
+> Some commands can fail when run with `run0` because of an [SELinux issue](https://github.com/teamsbc/distribution/issues/64). If a command fails, try `run0 --via-shell` before the command.
 
 ## Managing Services
 
@@ -23,8 +31,8 @@ Services are managed through `systemctl`.
 ### Starting and stopping a service
 
 ```console
-$ run0 systemctl start sshd.service
-$ run0 systemctl stop sshd.service
+$ systemctl start sshd.service
+$ systemctl stop sshd.service
 ```
 
 ### Enabling and disabling a service
@@ -32,8 +40,8 @@ $ run0 systemctl stop sshd.service
 Enabling a service means it will start automatically on boot. Disabling it removes that behavior.
 
 ```console
-$ run0 systemctl enable sshd.service
-$ run0 systemctl disable sshd.service
+$ systemctl enable sshd.service
+$ systemctl disable sshd.service
 ```
 
 ### Checking service status
@@ -81,5 +89,5 @@ $ timedatectl
 To change the timezone:
 
 ```console
-$ run0 timedatectl set-timezone Europe/Amsterdam
+$ timedatectl set-timezone Europe/Amsterdam
 ```

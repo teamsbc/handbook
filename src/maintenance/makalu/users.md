@@ -1,9 +1,8 @@
 # Users on Makalu
 
-For the other variant, see [Users on Lhotse](/maintenance/lhotse/users.md).
-
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
+> For the other variant, see [Users on Lhotse](/maintenance/lhotse/users.md).
 
 Makalu uses the same `systemd-homed` workflow as Lhotse for managing local users
 and their home areas. `systemd-homed` supports portable, encrypted home areas
@@ -14,16 +13,14 @@ Use `homectl` to manage these regular user accounts. The account records and hom
 data are stored outside Makalu's versioned `/usr` partition and are preserved
 during normal OS updates.
 
-The examples below use `alice`; replace it with your chosen username. Run the
-administrative commands from an existing administrator account using `run0`.
-If you are logged in as `root` after provisioning, omit `run0`.
+The examples below use `alice`; replace it with your chosen username. Run the administrative commands from a root shell.
 
 ## Adding a user
 
 Create the user account and its home area:
 
 ```console
-$ run0 homectl create alice
+$ homectl create alice
 ```
 
 Follow the prompts to set the user's password.
@@ -36,7 +33,7 @@ password. The home area is activated during login.
 For SSH access, enable and start the SSH server on the TeamSBC device:
 
 ```console
-$ run0 systemctl enable --now sshd.service
+$ systemctl enable --now sshd.service
 ```
 
 From another computer with an SSH client, connect to the device:
@@ -70,7 +67,7 @@ accounts.
 Show the account details, home storage type, and current state:
 
 ```console
-$ run0 homectl inspect alice
+$ homectl inspect alice
 ```
 
 ## Removing a user
@@ -80,10 +77,10 @@ $ run0 homectl inspect alice
 > confirmation prompt. Back up any data you need before running the command.
 
 Have the user log out of all sessions, then remove the account from another
-administrator account or a root session:
+root session:
 
 ```console
-$ run0 homectl remove alice
+$ homectl remove alice
 ```
 
 See [homectl(1)](https://www.freedesktop.org/software/systemd/man/latest/homectl.html)

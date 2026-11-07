@@ -1,11 +1,8 @@
-<span id="installing-applications"></span>
-
-# Applications
-
-For the other variant, see [Applications on Makalu](/maintenance/makalu/applications.md).
+# Applications on Lhotse {#applications}
 
 > [!NOTE]
-> This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> <span id="installing-applications"></span>This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> For the other variant, see [Applications on Makalu](/maintenance/makalu/applications.md).
 
 The Lhotse variant is package-based and uses `dnf` for package management.
 
@@ -18,13 +15,13 @@ $ dnf search htop
 ## Installing a package
 
 ```console
-$ run0 dnf install htop
+$ dnf install htop
 ```
 
 ## Removing a package
 
 ```console
-$ run0 dnf remove htop
+$ dnf remove htop
 ```
 
 ## Listing installed packages

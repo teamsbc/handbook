@@ -1,9 +1,8 @@
 # Updating on Lhotse {#updating}
 
-For the other variant, see [Updating on Makalu](/maintenance/makalu/updating.md).
-
 > [!NOTE]
 > This section applies to the [Lhotse](/getting-started/variants.md#lhotse) variant.
+> For the other variant, see [Updating on Makalu](/maintenance/makalu/updating.md).
 
 Keeping your system up to date is important for security and stability. TeamSBC uses `dnf` for package management.
 
@@ -16,7 +15,7 @@ $ dnf check-update
 ## Updating the system
 
 ```console
-$ run0 dnf upgrade
+$ dnf upgrade
 ```
 
 ## Rebooting after updates
@@ -32,6 +31,6 @@ $ needs-restarting -r
 If you want your system to apply updates automatically you can enable `dnf-automatic`.
 
 ```console
-$ run0 dnf install dnf-automatic
-$ run0 systemctl enable --now dnf-automatic-install.timer
+$ dnf install dnf-automatic
+$ systemctl enable --now dnf-automatic-install.timer
 ```
