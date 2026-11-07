@@ -70,6 +70,17 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Troubleshooting',
+        items: [
+          { text: 'Makalu', collapsed: true, items: [
+            { text: 'Basics', link: '/troubleshooting/makalu/basics' }
+          ] },
+          { text: 'Lhotse', collapsed: true, items: [
+            { text: 'Basics', link: '/troubleshooting/lhotse/basics' }
+          ] }
+        ]
+      },
+      {
         text: 'Customization',
         items: [
           { text: 'Build Your Own', link: '/customization/build-your-own' }

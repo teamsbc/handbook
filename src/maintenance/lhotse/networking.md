@@ -95,3 +95,5 @@ DNS is handled by `systemd-resolved`. You can check the current DNS configuratio
 ```console
 $ resolvectl status
 ```
+
+For help with problems, see [Troubleshooting on Lhotse](/troubleshooting/lhotse/basics.md#networking).

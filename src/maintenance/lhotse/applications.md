@@ -29,3 +29,5 @@ $ dnf remove htop
 ```console
 $ dnf list --installed
 ```
+
+For help with problems, see [Troubleshooting on Lhotse](/troubleshooting/lhotse/basics.md#package-and-update-failures).

@@ -52,3 +52,5 @@ $ systemctl enable --now dnf5-automatic.timer
 The timer runs according to its schedule; starting it does not necessarily install updates immediately. Automatic updates do not reboot the system by default. Check whether a reboot is recommended as described above, and reboot when needed.
 
 See the [DNF5 automatic update documentation](https://dnf5.readthedocs.io/en/stable/dnf5_plugins/automatic.8.html) for configuration options.
+
+For help with problems, see [Troubleshooting on Lhotse](/troubleshooting/lhotse/basics.md#package-and-update-failures).

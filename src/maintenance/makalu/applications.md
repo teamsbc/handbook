@@ -118,3 +118,5 @@ See [updatectl(1)](https://www.freedesktop.org/software/systemd/man/latest/updat
 for feature management and
 [systemd-sysext(8)](https://www.freedesktop.org/software/systemd/man/latest/systemd-sysext.html)
 for listing and activating extensions.
+
+For help with problems, see [Troubleshooting on Makalu](/troubleshooting/makalu/basics.md#system-extension-failures).

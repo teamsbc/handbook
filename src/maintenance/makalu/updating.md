@@ -77,3 +77,5 @@ for details about the separate update and reboot services, and the upstream
 [update timer definition](https://github.com/systemd/systemd/blob/v262/units/systemd-sysupdate-update.timer)
 and [systemd.timer(5)](https://www.freedesktop.org/software/systemd/man/latest/systemd.timer.html)
 for the default update schedule and timer behavior.
+
+For help with problems, see [Troubleshooting on Makalu](/troubleshooting/makalu/basics.md#update-failures).

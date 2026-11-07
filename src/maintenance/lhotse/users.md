@@ -89,3 +89,5 @@ $ homectl remove alice
 
 See [homectl(1)](https://www.freedesktop.org/software/systemd/man/latest/homectl.html)
 for more account and home-area management options.
+
+For help with problems, see [Troubleshooting on Lhotse](/troubleshooting/lhotse/basics.md#user-login).

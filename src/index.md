@@ -8,7 +8,7 @@ You can read it from the beginning or go straight to the chapter that covers you
 
 If you are new to TeamSBC, start with the [introduction](/getting-started/introduction.md) and read about the [variants](/getting-started/variants.md) before choosing an image. The [installation](/getting-started/installation.md) and [provisioning](/getting-started/provisioning.md) chapters then guide you through preparing your device for use.
 
-Once your system is running, the maintenance chapters cover everyday tasks such as updating, installing applications, managing users, and configuring networking. Follow the instructions for your chosen variant: [Lhotse](/maintenance/lhotse/basics.md) or [Makalu](/maintenance/makalu/basics.md). Some chapters are still being written as the project develops.
+Once your system is running, the maintenance chapters cover everyday tasks such as updating, installing applications, managing users, and configuring networking. Follow the instructions for your chosen variant: [Lhotse](/maintenance/lhotse/basics.md) or [Makalu](/maintenance/makalu/basics.md). For help diagnosing problems, see troubleshooting for [Lhotse](/troubleshooting/lhotse/basics.md) or [Makalu](/troubleshooting/makalu/basics.md).
 
 For changes you want to include in your own images, see [Build Your Own](/customization/build-your-own.md). The development chapters describe the project's [packages](/development/packages.md), [artifacts](/development/artifacts.md), build infrastructure, and testing.
 

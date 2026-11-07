@@ -91,3 +91,5 @@ To change the timezone:
 ```console
 $ timedatectl set-timezone Europe/Amsterdam
 ```
+
+For help with problems, see [Troubleshooting on Makalu](/troubleshooting/makalu/basics.md#services-and-logs).
