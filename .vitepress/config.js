@@ -51,7 +51,7 @@ export default defineConfig({
             items: [
               { text: 'Basics', link: '/maintenance/makalu/basics' },
               { text: 'Updating', link: '/maintenance/makalu/updating' },
-              { text: 'Installing Applications', link: '/maintenance/makalu/installing-applications' },
+              { text: 'Applications', link: '/maintenance/makalu/applications' },
               { text: 'Users', link: '/maintenance/makalu/users' },
               { text: 'Networking', link: '/maintenance/makalu/networking' }
             ]
@@ -62,7 +62,7 @@ export default defineConfig({
             items: [
               { text: 'Basics', link: '/maintenance/lhotse/basics' },
               { text: 'Updating', link: '/maintenance/lhotse/updating' },
-              { text: 'Installing Applications', link: '/maintenance/lhotse/installing-applications' },
+              { text: 'Applications', link: '/maintenance/lhotse/applications' },
               { text: 'Users', link: '/maintenance/lhotse/users' },
               { text: 'Networking', link: '/maintenance/lhotse/networking' }
             ]

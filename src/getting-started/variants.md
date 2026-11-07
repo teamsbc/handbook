@@ -20,7 +20,7 @@ Makalu is the cohesive variant. Its intended maintenance model treats the operat
 
 That model changes how you think about modifying and maintaining a device. Decisions about what belongs in the operating system image become part of preparing that image, and you should not carry over Lhotse's `dnf` procedures without checking the Makalu documentation.
 
-See [updating Makalu](../maintenance/makalu/updating.md) and [installing applications on Makalu](../maintenance/makalu/installing-applications.md).
+See [updating Makalu](../maintenance/makalu/updating.md) and [applications on Makalu](../maintenance/makalu/applications.md).
 
 ## Lhotse
 
@@ -28,7 +28,7 @@ Lhotse is the package-based variant. If you have used Fedora or another distribu
 
 You use `dnf` to manage software, and changes are made to the individual installation. This makes Lhotse a useful starting point if you want to explore TeamSBC through familiar package-management tasks and follow the maintenance instructions already available in the handbook.
 
-See [updating Lhotse](../maintenance/lhotse/updating.md) and [installing applications on Lhotse](../maintenance/lhotse/installing-applications.md).
+See [updating Lhotse](../maintenance/lhotse/updating.md) and [applications on Lhotse](../maintenance/lhotse/applications.md).
 
 ## Choosing a Variant
 
