@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
 
 <template>
   <aside ref="notice" class="experimental-notice" aria-label="Experimental software notice">
-    TeamBSC Linux is experimental and not ready for general usage.
+    TeamSBC Linux is experimental and not ready for general usage.
   </aside>
 </template>
 
