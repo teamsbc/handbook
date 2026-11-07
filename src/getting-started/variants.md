@@ -9,19 +9,16 @@ The handbook separates maintenance instructions for **Makalu** and **Lhotse**. R
 | | Lhotse | Makalu |
 | --- | --- | --- |
 | System management | Package-based | Cohesive |
-| Approach to changes | Install, remove, and update individual packages | Designed around replacing a versioned system image |
+| Approach to changes | Install, remove, and update individual packages | Updates replace entire partitions. |
 | Package tooling | Uses `dnf` | Uses `updatectl` |
-| Maintenance documentation | Covers updates, applications, users, and networking | Still being written |
 
-Image availability also depends on the device and architecture. The [supported devices list](./installation.md#supported-devices) identifies the images linked by this handbook; do not assume that every device has images for both variants.
+Image availability depends on the device and architecture. The [supported devices list](./installation.md#supported-devices) identifies the images linked by this handbook.
 
 ## Makalu
 
-Makalu is the cohesive variant. Its intended maintenance model treats the operating system as a versioned whole, with system updates replacing the system image rather than updating individual packages in place.
+Makalu is the cohesive variant. Its intended maintenance model treats the operating system as a versioned whole, with system updates replacing the system image rather than updating individual packages in place. Separate applications can be layered on top and update together with the system image.
 
 That model changes how you think about modifying and maintaining a device. Decisions about what belongs in the operating system image become part of preparing that image, and you should not carry over Lhotse's `dnf` procedures without checking the Makalu documentation.
-
-Makalu's maintenance procedures are still being documented. The update and application chapters are incomplete, so treat the cohesive model described here as a work in progress.
 
 See [updating Makalu](../maintenance/makalu/updating.md) and [installing applications on Makalu](../maintenance/makalu/installing-applications.md).
 
