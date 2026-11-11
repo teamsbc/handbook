@@ -99,8 +99,12 @@ merged. Replace `tmux` with the feature you are checking:
 $ updatectl features tmux
 $ systemd-sysext list
 $ systemd-sysext status
+$ journalctl -b -u systemd-sysext-sysroot.service
 $ journalctl -b -u systemd-sysext.service
 ```
+
+The `sysroot` service runs in the initrd when it is included in the booted
+image; older images may not have it. The other service runs in the main system.
 
 An enabled feature is not necessarily downloaded or active. If an OS update is
 waiting for a reboot, reboot into it before downloading an extension for the

@@ -28,6 +28,8 @@ For Makalu update work, keep the `/usr` payload and UKI on the same image versio
 
 System extension changes need a compatible base image. The current extension build uses the image's identity and version, so record both when testing that the extension can be used and its application runs.
 
+For changes to extension activation during boot, inspect the initrd in the built UKI and test with an installed extension across a reboot. Check the initrd and main-system journals for `systemd-sysext-sysroot.service` and `systemd-sysext.service`, and confirm `systemd-sysext status` shows the expected extensions. If the extension supplies a systemd generator, verify that its units are generated and start as configured without a manual manager reload. Test an update and rollback as well as a fresh boot, and check for SELinux denials.
+
 ## Hardware Testing
 
 Virtual machines cannot establish that a board's firmware, boot files, storage interfaces, or wireless hardware work. Changes to Raspberry Pi platform definitions or U-Boot packages need testing on the affected physical board.
