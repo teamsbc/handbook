@@ -1,37 +1,11 @@
 # Variants
 
-TeamSBC variants offer different approaches to maintaining devices. They share the project's overall design goals, but differ in how you make changes to the installed system. Choosing a variant is therefore also choosing how you want to manage it after installation.
-
-The handbook separates maintenance instructions for **Makalu** and **Lhotse**. Read the documentation for your chosen variant when updating a system or adding applications, since those procedures are not interchangeable.
-
-## At a Glance
-
-| | Lhotse | Makalu |
-| --- | --- | --- |
-| System management | Package-based | Cohesive |
-| Approach to changes | Install, remove, and update individual packages | Updates replace entire partitions. |
-| Package tooling | Uses `dnf` | Uses `updatectl` |
-
-Image availability depends on the device and architecture. The [supported devices list](./installation.md#supported-devices) identifies the images linked by this handbook.
+TeamSBC variants describe approaches to maintaining devices. Each variant has its own maintenance instructions and image types.
 
 ## Makalu
 
-Makalu is the cohesive variant. Its intended maintenance model treats the operating system as a versioned whole, with system updates replacing the system image rather than updating individual packages in place. Separate applications can be layered on top and update together with the system image.
+Makalu is currently the TeamSBC variant. Its cohesive maintenance model treats the operating system as a versioned whole, with system updates replacing the system image rather than updating individual packages in place. Separate applications can be layered on top and update together with the system image.
 
-That model changes how you think about modifying and maintaining a device. Decisions about what belongs in the operating system image become part of preparing that image, and you should not carry over Lhotse's `dnf` procedures without checking the Makalu documentation.
+Decisions about what belongs in the operating system image are part of preparing that image. See [updating Makalu](../maintenance/makalu/updating.md) and [applications on Makalu](../maintenance/makalu/applications.md); these chapters are still being documented.
 
-See [updating Makalu](../maintenance/makalu/updating.md) and [applications on Makalu](../maintenance/makalu/applications.md).
-
-## Lhotse
-
-Lhotse is the package-based variant. If you have used Fedora or another distribution where you install and update packages on the running system, this approach will probably feel familiar.
-
-You use `dnf` to manage software, and changes are made to the individual installation. This makes Lhotse a useful starting point if you want to explore TeamSBC through familiar package-management tasks and follow the maintenance instructions already available in the handbook.
-
-See [updating Lhotse](../maintenance/lhotse/updating.md) and [applications on Lhotse](../maintenance/lhotse/applications.md).
-
-## Choosing a Variant
-
-If you want to get started with the installation and maintenance procedures currently documented here, Lhotse is the straightforward starting point. If you are interested in exploring or contributing to the cohesive approach, read the Makalu chapters and [talk with the community](../preface/community.md) about the work in progress.
-
-Once you have chosen a variant, continue to [installation](./installation.md) to find an image for your device and prepare it for booting.
+Image availability depends on the device and architecture. Continue to [installation](./installation.md) to find an image and prepare it for booting.

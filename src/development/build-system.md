@@ -19,7 +19,7 @@ An image build combines the chosen variant and device definition with shared pac
 
 Definitions reuse configuration through image-builder's experimental YAML extensions, including `!xref` references to other files. A generic YAML parser does not resolve these references or establish whether the resulting image definition is usable. Use image-builder to interpret the definitions.
 
-As an example, `lhotse-rpi4` combines shared core and Lhotse packages with hardware and Wi-Fi packages, the Raspberry Pi 4 platform, and the Raspberry Pi disk layout. A core package-set change can affect several image types, whereas a change in the board-specific definition can be limited to that board.
+As an example, `makalu-rpi4` combines shared core and Makalu packages with hardware and Wi-Fi packages, the Raspberry Pi 4 platform, and the Raspberry Pi disk layout. A core package-set change can affect several image types, whereas a change in the board-specific definition can be limited to that board.
 
 ## Building Locally
 
@@ -28,10 +28,10 @@ Run the provided Makefile from the root of your artifacts checkout. The containe
 TeamSBC uses recent image-builder features that may not yet be present in a packaged release. The upstream container is the usual starting point:
 
 ```console
-$ make build-in-container VERSION=46 TYPE=lhotse-virt
+$ make build-in-container VERSION=46 TYPE=makalu-virt
 ```
 
-This example builds the Fedora 46 Lhotse virtual machine image. The helper mounts the checkout's definitions and repositories into the container and writes outputs into the working directory. It does not upload or publish them.
+This example builds the Fedora 46 Makalu virtual machine image. The helper mounts the checkout's definitions and repositories into the container and writes outputs into the working directory. It does not upload or publish them.
 
 The Makefile exposes these build variables:
 
@@ -46,7 +46,7 @@ Specify the version and type explicitly so you know which image you are requesti
 To use a locally installed image-builder instead, run:
 
 ```console
-$ make build VERSION=46 TYPE=lhotse-virt
+$ make build VERSION=46 TYPE=makalu-virt
 ```
 
 The `build` target invokes `image-builder` from the host's command search path through `sudo`, with the checkout's repository and definition paths. Installing a packaged image-builder is an option, but its version must understand the experimental features used by these definitions.
@@ -58,7 +58,7 @@ A manifest describes the build pipelines and the sources they fetch. It is usefu
 The container helper can generate one without building the disk image:
 
 ```console
-$ make manifest-in-container VERSION=46 TYPE=lhotse-virt
+$ make manifest-in-container VERSION=46 TYPE=makalu-virt
 ```
 
 The current `manifest-in-container` target explicitly selects `aarch64`. Keep that in mind when comparing its output with a build on an `x86_64` host. For another architecture, adapt the image-builder invocation from the [artifact workflow](https://github.com/teamsbc/artifacts/blob/main/.github/workflows/build.yml), which shows the manifest command with an explicit architecture.

@@ -2,7 +2,6 @@
 
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
-> For the other variant, see [Updating on Lhotse](/maintenance/lhotse/updating.md).
 
 ## Checking for updates
 

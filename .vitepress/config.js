@@ -55,17 +55,6 @@ export default defineConfig({
               { text: 'Users', link: '/maintenance/makalu/users' },
               { text: 'Networking', link: '/maintenance/makalu/networking' }
             ]
-          },
-          {
-            text: 'Lhotse',
-            collapsed: true,
-            items: [
-              { text: 'Basics', link: '/maintenance/lhotse/basics' },
-              { text: 'Updating', link: '/maintenance/lhotse/updating' },
-              { text: 'Applications', link: '/maintenance/lhotse/applications' },
-              { text: 'Users', link: '/maintenance/lhotse/users' },
-              { text: 'Networking', link: '/maintenance/lhotse/networking' }
-            ]
           }
         ]
       },
@@ -74,9 +63,6 @@ export default defineConfig({
         items: [
           { text: 'Makalu', collapsed: true, items: [
             { text: 'Basics', link: '/troubleshooting/makalu/basics' }
-          ] },
-          { text: 'Lhotse', collapsed: true, items: [
-            { text: 'Basics', link: '/troubleshooting/lhotse/basics' }
           ] }
         ]
       },

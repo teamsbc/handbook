@@ -24,7 +24,7 @@ Disk-layout changes should be exercised on storage matching the image's size and
 
 For package changes, inspect the built RPM's contents and test installation in a matching environment. When an upgrade can encounter existing files or configuration, test that route as well as a fresh installation. Check dependencies, scriptlets, service behavior, and any SELinux denials relevant to the change.
 
-For Lhotse, exercise the package update or application-management path you changed. For Makalu update work, keep the `/usr` payload and UKI on the same image version and test the transition to the new version, including a reboot. Check that the source filenames, transfer patterns, partition labels, and boot entries agree.
+For Makalu update work, keep the `/usr` payload and UKI on the same image version and test the transition to the new version, including a reboot. Check that the source filenames, transfer patterns, partition labels, and boot entries agree.
 
 System extension changes need a compatible base image. The current extension build uses the image's identity and version, so record both when testing that the extension can be used and its application runs.
 

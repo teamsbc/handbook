@@ -15,7 +15,7 @@ The `common/` directory contains the packages that define the shared system and 
 | `teamsbc-config` | Disk provisioning configuration and Makalu's update transfers and import keyring |
 | `teamsbc-selinux` | SELinux policy adjustments for TeamSBC's services and workflows |
 
-Some specs produce several subpackages. For example, `teamsbc-release` and `teamsbc-config` separate common files from Lhotse and Makalu configuration. When changing a file, look at the relevant `%files` section and dependencies to understand which installations receive it.
+Some specs produce several subpackages. For example, `teamsbc-release` and `teamsbc-config` separate common files from variant-specific configuration. When changing a file, look at the relevant `%files` section and dependencies to understand which installations receive it.
 
 Boot configuration spans packages and image definitions. A change to Makalu's boot entry naming, for example, can also affect the UKI exported by an image build and the filename patterns used by `systemd-sysupdate`. Read the [build system](./build-system.md) chapter when working on changes that cross between them.
 

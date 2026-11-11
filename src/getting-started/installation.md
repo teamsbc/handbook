@@ -2,7 +2,7 @@
 
 TeamSBC provides disk images prepared for specific devices and virtual machines. Installation starts with choosing the right image, unpacking it, and either attaching it to a virtual machine or writing it to your device's storage.
 
-Before downloading an image, read about the [variants](./variants.md) and decide which one you want to use. Then find an image that matches your device and architecture in the [supported devices list](#supported-devices).
+Before downloading an image, read about the [variants](./variants.md) to learn about the current maintenance model. Then find an image that matches your device and architecture in the [supported devices list](#supported-devices).
 
 ## Before You Start
 
@@ -18,7 +18,7 @@ Commands in this chapter run on the computer preparing the image. Replace the ex
 
 ## Installation Steps
 
-The overall process is the same for both variants, although available images differ by device.
+Available images differ by device.
 
 ### Download and Unpack
 
@@ -27,7 +27,7 @@ Download the compressed disk image for your device, architecture, and variant. F
 Unpack the download on your host computer:
 
 ```sh
-unxz teamsbc-46-lhotse-rpi4.raw.xz
+unxz teamsbc-makalu-rpi4-46.20261010.0.raw.xz
 ```
 
 This produces a `.raw` disk image and removes the compressed `.xz` file. The raw image contains the disk layout and filesystems that the device will use; it is the file you will attach to a virtual machine or write to storage.
@@ -58,7 +58,7 @@ The example below uses `/dev/sde` for the whole card. Your device path may be di
 Write the unpacked image to the card:
 
 ```sh
-sudo dd if=teamsbc-46-lhotse-rpi4.raw of=/dev/sde bs=4M conv=fsync status=progress
+sudo dd if=teamsbc-makalu-rpi4-46.20261010.0.raw of=/dev/sde bs=4M conv=fsync status=progress
 ```
 
 Here, `if` identifies the image file and `of` identifies the destination device. The command uses `sudo` for the permissions needed on the host computer to write directly to a disk. If your host uses another way to run commands as root, use that instead.
@@ -79,41 +79,37 @@ Find the device you want to run TeamSBC on in the following list. If your device
 
 ### Virtual Machine
 
-To run TeamSBC on virtual machines we provide the `virt` image type for both [Lhotse](./variants.md#lhotse) and [Makalu](./variants.md#makalu) on `x86_64` and `aarch64`. You can download the latest built images from the following URLs:
+To run TeamSBC on virtual machines we provide the `virt` image type for [Makalu](./variants.md#makalu) on `x86_64` and `aarch64`. You can download the latest built images from the following URLs:
 
 #### Experimental
 
 ##### x86_64 {#x86_64}
 
-- [TeamSBC 46 Lhotse (virt, x86_64)](https://artifacts.teamsbc.net/main/46/x86_64/teamsbc-lhotse-virt/index.html)
 - [TeamSBC 46 Makalu (virt, x86_64)](https://artifacts.teamsbc.net/main/46/x86_64/teamsbc-makalu-virt/index.html)
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (virt, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-virt/index.html)
 - [TeamSBC 46 Makalu (virt, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-makalu-virt/index.html)
 
 ### Single Board Computers
 
 #### Raspberry Pi 4
 
-To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for both [Lhotse](./variants.md#lhotse) and [Makalu](./variants.md#makalu). You can download the latest built images from the following URLs.
+To run TeamSBC on the Raspberry Pi 4 we provide the `rpi4` image type for [Makalu](./variants.md#makalu). You can download the latest built images from the following URLs.
 
 #### Experimental
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (rpi4, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-rpi4/index.html)
 - [TeamSBC 46 Makalu (rpi4, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-makalu-rpi4/index.html)
 
 
 #### Raspberry Pi 5
 
-To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for both [Lhotse](./variants.md#lhotse) and [Makalu](./variants.md#makalu). You can download the latest built images from the following URLs.
+To run TeamSBC on the Raspberry Pi 5 we provide the `rpi5` image type for [Makalu](./variants.md#makalu). You can download the latest built images from the following URLs.
 
 #### Experimental
 
 ##### aarch64
 
-- [TeamSBC 46 Lhotse (rpi5, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-lhotse-rpi5/index.html)
 - [TeamSBC 46 Makalu (rpi5, aarch64)](https://artifacts.teamsbc.net/main/46/aarch64/teamsbc-makalu-rpi5/index.html)

@@ -26,13 +26,11 @@ artifacts.teamsbc.net/
   main/
     46/
       x86_64/
-        teamsbc-lhotse-virt/
         teamsbc-makalu-virt/
       aarch64/
-        teamsbc-lhotse-virt/
-        teamsbc-lhotse-rpi4/
-        teamsbc-lhotse-rpi5/
+        teamsbc-makalu-virt/
         teamsbc-makalu-rpi4/
+        teamsbc-makalu-rpi5/
 ```
 
 Update payloads and extensions use the same grouping on their respective publication domains. Unlike the [package repositories](./packages.md#repository-layout-and-signing), these outputs use versioned filenames within an image-type directory rather than `latest/` and dated snapshot directories.
@@ -66,6 +64,6 @@ You can find download links for all supported devices on the [installation](../g
 
 ## Building Artifacts
 
-The [artifact build workflow](https://github.com/teamsbc/artifacts/blob/main/.github/workflows/build.yml) defines the combinations built by CI. Its current Fedora 46 matrix includes Lhotse virtual machines on both architectures, Lhotse Raspberry Pi 4 and 5 images on `aarch64`, Makalu virtual machines on `x86_64`, and Makalu Raspberry Pi 4 images on `aarch64`.
+The [artifact build workflow](https://github.com/teamsbc/artifacts/blob/main/.github/workflows/build.yml) defines the combinations built by CI. Consult the workflow matrix for the current Fedora 46 image and architecture combinations.
 
 A definition can describe more combinations than CI currently builds. Use the workflow matrix to determine what is configured for publication, and the installation chapter for the download links intended for getting started. To build or modify an image yourself, continue to the [build system](./build-system.md) chapter.

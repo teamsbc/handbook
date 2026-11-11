@@ -6,6 +6,4 @@ TeamSBC takes its name from the team and the computers the distribution targets.
 
 ## Variants
 
-The names **Lhotse** and **Makalu** come from mountains in the Himalayas. They give the variants distinct names without implying that one approach is better than the other.
-
-Lhotse is the package-managed variant, while Makalu is the image-based variant. See [Variants](../getting-started/variants.md) for how they differ.
+Variant names come from mountains in the Himalayas. **Makalu** is the current variant; see [Variants](../getting-started/variants.md) for its maintenance model.

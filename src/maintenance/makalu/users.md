@@ -2,7 +2,6 @@
 
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
-> For the other variant, see [Users on Lhotse](/maintenance/lhotse/users.md).
 
 TeamSBC prefers `systemd-homed` for managing regular local users and their home
 areas. It supports portable home areas that can be encrypted and unlocked when

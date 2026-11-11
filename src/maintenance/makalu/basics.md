@@ -6,7 +6,6 @@ prev: false
 
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
-> For the other variant, see [Basics on Lhotse](/maintenance/lhotse/basics.md).
 
 This section covers fundamental system administration tasks on TeamSBC.
 

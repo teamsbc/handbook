@@ -33,7 +33,7 @@ After you complete the prompts, booting continues to the login prompt. Log in as
 
 Offline provisioning lets you set initial values in the image before the device boots. Run the commands in this section on the Linux host computer preparing the image, after [unpacking the download](./installation.md#download-and-unpack) and before writing it to storage or starting a virtual machine.
 
-The host needs the `systemd` image-management tools used below. The examples use `sudo` to run them as root on that host; this is separate from TeamSBC's use of `run0` on the installed system. Replace `teamsbc-46-lhotse-rpi4.raw` throughout with your unpacked image's filename.
+The host needs the `systemd` image-management tools used below. The examples use `sudo` to run them as root on that host; this is separate from TeamSBC's use of `run0` on the installed system. Replace `teamsbc-makalu-rpi4-46.20261010.0.raw` throughout with your unpacked image's filename.
 
 ### Set the Initial Values
 
@@ -41,7 +41,7 @@ Set at least the timezone and root password to avoid waiting for those prompts d
 
 ```console
 $ sudo systemd-firstboot \
-  --image teamsbc-46-lhotse-rpi4.raw \
+  --image teamsbc-makalu-rpi4-46.20261010.0.raw \
   --prompt-root-password \
   --prompt-timezone
 ```
@@ -54,7 +54,7 @@ If you plan to administer the device remotely, enable its SSH service in the ima
 
 ```console
 $ sudo systemctl \
-  --image teamsbc-46-lhotse-rpi4.raw \
+  --image teamsbc-makalu-rpi4-46.20261010.0.raw \
   enable sshd.service
 ```
 
@@ -62,7 +62,7 @@ This enables `sshd` for subsequent boots of the TeamSBC installation. It does no
 
 Enabling the service is only part of preparing remote access. The device also needs a working network connection and an account whose authentication is allowed by its SSH configuration. Setting the root password alone does not guarantee remote root login. If you have not prepared those details, keep a console available for the first boot so you can finish the setup.
 
-See [users on Lhotse](../maintenance/lhotse/users.md) or [users on Makalu](../maintenance/makalu/users.md) for user-management instructions. Networking is documented in [networking on Lhotse](../maintenance/lhotse/networking.md); the corresponding [Makalu networking](../maintenance/makalu/networking.md) chapter is still being written.
+The [Makalu users](../maintenance/makalu/users.md) and [networking](../maintenance/makalu/networking.md) chapters are still being written.
 
 ### Auto Relabeling
 
@@ -72,7 +72,7 @@ Create an empty marker file on your host and copy it into the image's filesystem
 
 ```console
 $ touch autorelabel
-$ sudo systemd-dissect --copy-to teamsbc-46-lhotse-rpi4.raw autorelabel /.autorelabel
+$ sudo systemd-dissect --copy-to teamsbc-makalu-rpi4-46.20261010.0.raw autorelabel /.autorelabel
 $ rm autorelabel
 ```
 
@@ -90,9 +90,9 @@ The timezone and root password are already set, so boot can continue without ask
 
 Initial provisioning gives you access to the system. From there, configure it for the job you want it to do:
 
-- Set up the local users you want to use for everyday work. See [users on Lhotse](../maintenance/lhotse/users.md) or [users on Makalu](../maintenance/makalu/users.md).
-- Configure networking for your environment and confirm how you will reach the device. See [networking on Lhotse](../maintenance/lhotse/networking.md) or [networking on Makalu](../maintenance/makalu/networking.md).
-- Familiarize yourself with service management and system logs in [basics on Lhotse](../maintenance/lhotse/basics.md) or [basics on Makalu](../maintenance/makalu/basics.md).
+- Set up the local users you want to use for everyday work. See [users on Makalu](../maintenance/makalu/users.md).
+- Configure networking for your environment and confirm how you will reach the device. See [networking on Makalu](../maintenance/makalu/networking.md).
+- Familiarize yourself with service management and system logs in [basics on Makalu](../maintenance/makalu/basics.md).
 - Follow the update and application-installation instructions for your chosen variant in the maintenance chapters. Makalu's maintenance instructions are still being documented.
 
 If a step is unclear or your device behaves differently from these instructions, [join the community](../preface/community.md) and share what you are working with.

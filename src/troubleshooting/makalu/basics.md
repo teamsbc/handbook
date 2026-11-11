@@ -2,7 +2,6 @@
 
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
-> For the other variant, see [Troubleshooting Basics on Lhotse](/troubleshooting/lhotse/basics.md).
 
 Start with the checks below and note any error messages. Administrative commands
 may require root privileges; see [Privilege Escalation](/maintenance/makalu/basics.md#privilege-escalation).

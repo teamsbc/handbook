@@ -2,7 +2,6 @@
 
 > [!NOTE]
 > <span id="installing-applications-on-makalu"></span>This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
-> For the other variant, see [Applications on Lhotse](/maintenance/lhotse/applications.md).
 
 Makalu provides optional applications as system extensions: images containing
 additional files that are made available in the running system's `/usr` directory.
