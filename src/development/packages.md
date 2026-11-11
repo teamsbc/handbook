@@ -11,7 +11,6 @@ The `common/` directory contains the packages that define the shared system and 
 | Package | Responsibility |
 | --- | --- |
 | `teamsbc-release` | Operating system identity, service presets, and kernel-install configuration |
-| `teamsbc-repos` | TeamSBC package repository definitions and the RPM signing public key |
 | `teamsbc-config` | Disk provisioning configuration and Makalu's update transfers and import keyring |
 | `teamsbc-selinux` | SELinux policy adjustments for TeamSBC's services and workflows |
 
@@ -44,9 +43,9 @@ Published packages can be browsed on [packages.teamsbc.net](https://packages.tea
 <branch>/<YYYY.MM.DD>/<Fedora version>/<architecture>/<repository>/
 ```
 
-For example, `main/latest/46/aarch64/common/` contains the current common repository for that architecture and Fedora version. The `teamsbc-repos` package configures these repositories on installed systems.
+For example, `main/latest/46/aarch64/common/` contains the current common repository for that architecture and Fedora version. Image builds use repository definitions in the artifacts repository.
 
-RPMs are signed with the TeamSBC GPG key. Its public key is installed at `/etc/pki/rpm-gpg/RPM-GPG-KEY-teamsbc` by `teamsbc-repos` and is also published with the package repositories. Package signature verification and repository metadata signing are separate: the current repository configuration enables RPM signature checking but does not enable metadata signature checking.
+RPMs are signed with the TeamSBC GPG key. Its public key is [published with the package repositories](https://packages.teamsbc.net/RPM-GPG-KEY-teamsbc). Image builds use their own repository configuration and signing keys; Makalu uses the import keyring from `teamsbc-config` to verify updates.
 
 ## Working on a Package
 
