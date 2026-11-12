@@ -90,6 +90,34 @@ $ journalctl -b -u systemd-sysupdate-update.service
 Check networking and disk space if downloads or installations fail. An installed
 OS update only takes effect after a reboot; see [Updating](/maintenance/makalu/updating.md).
 
+## SELinux policy updates
+
+> [!NOTE]
+> In the future, SELinux is expected to use updated policies from `/usr` as
+> well. Until then, after a Makalu update it can be necessary to manually
+> install and reload an updated policy module.
+
+Makalu updates replace `/usr`, but the SELinux module store persists across
+updates. If the updated TeamSBC policy is present in `/usr` but has not been
+installed in the store, run the following as root:
+
+```console
+# semodule -s targeted -X 200 -i /usr/share/selinux/packages/targeted/teamsbc.pp.bz2
+```
+
+This installs the TeamSBC module and reloads the running policy. Use priority
+`200` so that the module does not override future package updates at that
+priority. Check its installation and priority with:
+
+```console
+# semodule -s targeted -lfull | grep -w teamsbc
+```
+
+A higher-priority `teamsbc` module will take precedence. After installation,
+retry the operation that failed. This procedure updates the TeamSBC module only;
+it does not synchronize other policy modules or automatically track later image
+updates and rollbacks.
+
 ## System extension failures
 
 Check whether the feature is enabled, the image is present, and the extension is
