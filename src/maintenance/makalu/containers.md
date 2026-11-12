@@ -110,7 +110,12 @@ for mount options and SELinux labeling.
 
 ## Updating container images
 
-Updating the Podman extension updates the engine, not the application images.
+Container images and their services have their own update schedule, independent
+of the Makalu base system and its system extensions. An OS update or a Podman
+extension update does not update your container images. Likewise, updating a
+container image does not update the base system. Continue to follow
+[Updating on Makalu](./updating.md) for OS and extension updates.
+
 To update an image manually, pull a suitable new image and restart the Quadlet
 service to recreate its container. Image tags can change; use a versioned tag or
 digest when you need that type of control.
