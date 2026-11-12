@@ -52,7 +52,7 @@ export default defineConfig({
               { text: 'Basics', link: '/maintenance/makalu/basics' },
               { text: 'Updating', link: '/maintenance/makalu/updating' },
               { text: 'Applications', link: '/maintenance/makalu/applications' },
-              { text: 'Podman', link: '/maintenance/makalu/podman' },
+              { text: 'Containers', link: '/maintenance/makalu/containers' },
               { text: 'Users', link: '/maintenance/makalu/users' },
               { text: 'Networking', link: '/maintenance/makalu/networking' }
             ]

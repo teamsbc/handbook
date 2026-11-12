@@ -1,4 +1,4 @@
-# Podman on Makalu
+# Containers on Makalu
 
 > [!NOTE]
 > This section applies to the [Makalu](/getting-started/variants.md#makalu) variant.
